@@ -67,7 +67,9 @@ export function BreweryList(): JSX.Element {
                 </div>
             </Card.Content>
             <Card.Content>
-              <div>
+              <div
+              onClick = {()=> window.open(brewery.website_url)} 
+              >
                 {brewery.website_url && 
                   <>
                     <Icon name="mail"/>
