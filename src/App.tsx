@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Label } from 'semantic-ui-react';
+import { BreweryList } from './features/Brewery/BreweryList';
 
 function App() {
   return (
     <div className="App">
-        <Label>Breweries</Label>
+        <BreweryList />
     </div>
   );
 }
