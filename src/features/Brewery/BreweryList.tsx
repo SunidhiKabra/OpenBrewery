@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Header, Icon } from 'semantic-ui-react';
+import './BreweryList.css';
 import 'semantic-ui-css/semantic.min.css';
 
 export function BreweryList(): JSX.Element {

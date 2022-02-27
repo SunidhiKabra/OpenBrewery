@@ -1,0 +1,21 @@
+.brewery-list {
+  background: #372c2e;
+  min-height: 100%;
+}
+
+.brewery-list > .header {
+  background: #372c2e;
+  color: #fba92c;
+}
+
+.header > .icon {
+  color: #fba92c;
+}
+
+.header > .content {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  color: #fba92c;
+  margin-bottom: 3rem;
+}
