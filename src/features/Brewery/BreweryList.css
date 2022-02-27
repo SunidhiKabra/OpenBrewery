@@ -19,3 +19,20 @@
   color: #fba92c;
   margin-bottom: 3rem;
 }
+
+.card {
+  border: 2px solid blue;
+  margin: 3rem;
+  padding: 1rem;
+}
+
+.card > .header {
+  font-size: x-large;
+  margin: 1rem;
+  color: #372c2e;
+  font-weight: bold;
+}
+
+.card > .content {
+  color: #a0522d;
+}
