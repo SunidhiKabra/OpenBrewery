@@ -36,3 +36,10 @@
 .card > .content {
   color: #a0522d;
 }
+
+.button {
+  position: fixed !important;
+  top: 1rem;
+  left: 2rem;
+  background-color: #fba92c;
+}

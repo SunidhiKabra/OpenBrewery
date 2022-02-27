@@ -44,6 +44,7 @@ export function BreweryList(): JSX.Element {
       </Header>
       {open ? 
         (<>
+          <Button onClick={() => setOpen(false)} content='Back' icon='left arrow' labelPosition='left' inverted/>
           <BreweryDetails brewery={brewery}/> 
         </>):
         <Card.Group itemsPerRow={3}>
