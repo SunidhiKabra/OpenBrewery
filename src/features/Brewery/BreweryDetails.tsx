@@ -35,7 +35,8 @@ export function BreweryDetails(props: Props): JSX.Element {
 
             {lat != 0 && <div className='map-wrapper'>
               <GoogleMapReact
-                bootstrapURLKeys={{ key: "AIzaSyAOYFeXTfJYBxNyxwpVlup7XKKZ5Nb_rME" }}
+                //Add your key here! 
+                bootstrapURLKeys={{ key: "" }}
                 defaultCenter={center}
                 defaultZoom={13}
               >
