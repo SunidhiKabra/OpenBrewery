@@ -6,7 +6,10 @@ import _ from 'lodash';
 
 export interface Props {
   brewery: any;
-}
+}  
+
+//Add your key here! 
+const apiKey: string = '';
 
 export function BreweryDetails(props: Props): JSX.Element {
   const {brewery} = props;
@@ -35,8 +38,7 @@ export function BreweryDetails(props: Props): JSX.Element {
 
             {lat != 0 && <div className='map-wrapper'>
               <GoogleMapReact
-                //Add your key here! 
-                bootstrapURLKeys={{ key: "" }}
+                bootstrapURLKeys={{ key: apiKey }}
                 defaultCenter={center}
                 defaultZoom={13}
               >
