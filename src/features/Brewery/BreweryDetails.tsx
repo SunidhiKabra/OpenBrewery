@@ -1,8 +1,8 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Button, Card, Label } from 'semantic-ui-react';
+import React, { useState } from 'react';
 import './BreweryDetails.css';
+import GoogleMapReact from 'google-map-react';
+import { Card, Icon } from 'semantic-ui-react';
+import _ from 'lodash';
 
 export interface Props {
   brewery: any;
@@ -10,14 +10,49 @@ export interface Props {
 
 export function BreweryDetails(props: Props): JSX.Element {
   const {brewery} = props;
+  const [lat, setLat] = useState<number>(_.toNumber(brewery.latitude));
+  const [lng, setLng] = useState<number>(_.toNumber(brewery.longitude)); 
+  const center: GoogleMapReact.Coords = {lat, lng};
 
   return (
-    <div className={"brewery-details"}>
-      <Card>
-        <Card.Header>
-          {brewery.name}
-        </Card.Header>
+      <div className={"brewery-details"}>
+        <Card centered>
+          <Card.Header>
+            {brewery.name}
+          </Card.Header>
+          <Card.Content>
+            <div>
+              <p>
+                {brewery.street ? ` ${brewery.street}` : ''}
+                {brewery.city ? ` ${brewery.city},` : ''} 
+              </p>
+              <p>
+                {brewery.state ? ` ${brewery.state}` : ''} 
+                {brewery.postal_code ? ` ${brewery.postal_code}` : ''}
+              </p>
+            </div>
+
+
+            {lat != 0 && <div className='map-wrapper'>
+              <GoogleMapReact
+                bootstrapURLKeys={{ key: "AIzaSyAOYFeXTfJYBxNyxwpVlup7XKKZ5Nb_rME" }}
+                defaultCenter={center}
+                defaultZoom={13}
+              >
+                <Marker
+                  lat={lat}
+                  lng={lng}
+                />
+              </GoogleMapReact>
+          </div>}
+        </Card.Content>
       </Card>
     </div>
   );
 }
+
+const Marker = ({text}: any) => 
+  <div>
+    <Icon name='map marker alternate' size='huge' />
+  </div>;
+

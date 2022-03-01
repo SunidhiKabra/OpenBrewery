@@ -1,6 +1,7 @@
 .brewery-list {
   background: #372c2e;
   min-height: 100%;
+  padding: 2rem;
 }
 
 .brewery-list > .header {

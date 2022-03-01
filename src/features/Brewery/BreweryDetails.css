@@ -2,3 +2,20 @@
   background: #372c2e;
   height: 100%;
 }
+
+.brewery-details .card {
+  min-width: 40%;
+}
+
+.brewery-details .map-wrapper {
+  height: 60vh;
+  width: 100%;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
